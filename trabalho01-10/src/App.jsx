@@ -1,12 +1,12 @@
 import React from 'react';
-import Login from './Login';
+import Login from './pages/Login/login.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className="login-container">
       <h1>Login do Twitter</h1>
-      <Login />
+      <Login />      
       <p>
         Não tem uma conta? <a href="#">Cadastre-se</a>
       </p>

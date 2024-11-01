@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import InputField from './InputField';
-import Button from './Button';
+import InputField from '../../InputField/input.jsx';
+import Button from '../../componentes/Button/button.jsx';
 
 const Login = () => {
   const [email, setEmail] = useState('');
