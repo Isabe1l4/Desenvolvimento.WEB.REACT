@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import InputField from '../../InputField/input.jsx';
-import Button from '../../componentes/Button/button.jsx';
+import InputField from '../../components/InputField/input.jsx';
+import Button from '../../components/Button/button.jsx';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,21 +14,19 @@ const Login = () => {
   };
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <InputField 
-        label="Email ou Telefone" 
-        type="text" 
-        value={email} 
-        onChange={(e) => setEmail(e.target.value)} 
-      />
-      <InputField 
-        label="Senha" 
-        type="password" 
-        value={password} 
-        onChange={(e) => setPassword(e.target.value)} 
-      />
-      <Button text="Entrar" />
-    </form>
+    <div className="login-container">
+      <form className="login-form">
+        <div className="form-group">
+          <label htmlFor="email"></label>
+          <input type="email" id="email" placeholder="Telefone, email, ou usuário" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password"></label>
+          <input type="password" id="password" placeholder="Senha" />
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
   );
 };
 
